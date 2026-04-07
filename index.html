@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Lentille mince convergente</title>
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+<style>button{margin-top:20px;padding:10px 20px;font-size:16px;}</style>
+</head>
+<body>
+<h1>Lentille mince convergente</h1>
+Points movibles (à la souris) :
+<ul>
+    <li>A (point A de l'objet pour le déplacer le long de l'axe optique)</li>
+    <li>B (point B de l'objet pour ajuster la hauteur de l'objet)</li>
+    <li>F (foyer objet, le foyer image F' s'adaptant automatiquement de sorte que FO=FO')</li>
+</ul>
+<button id="btn-telecharger">Télécharger</button>
+<div id="ggb-container" class="ggb-container" style="margin-top:20px;"></div>
+<script>
+const params={appName:"classic",scaleContainerClass:"ggb-container",showToolBar:false,showAlgebraInput:false,showMenuBar:false,filename:"Lentille mince convergente.ggb"};
+const applet=new GGBApplet(params,true);
+window.addEventListener("load",()=>applet.inject("ggb-container"));
+btn_telecharger.onclick=()=>{let a=document.createElement("a");a.href="https://monsieurouiplala.github.io/lentille-mince-convergente/Lentille mince convergente.ggb";a.download="Lentille mince convergente.ggb";a.click()};
+</script>
+</body>
+</html>
