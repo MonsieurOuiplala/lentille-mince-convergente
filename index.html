@@ -17,10 +17,11 @@ Points movibles (à la souris) :
 <button id="btn-telecharger">Télécharger</button>
 <div id="ggb-container" class="ggb-container" style="margin-top:20px;"></div>
 <script>
-const params={appName:"classic",scaleContainerClass:"ggb-container",showToolBar:false,showAlgebraInput:false,showMenuBar:false,filename:"Lentille mince convergente.ggb"};
-const applet=new GGBApplet(params,true);
-window.addEventListener("load",()=>applet.inject("ggb-container"));
-btn_telecharger.onclick=()=>{let a=document.createElement("a");a.href="https://monsieurouiplala.github.io/lentille-mince-convergente/Lentille mince convergente.ggb";a.download="Lentille mince convergente.ggb";a.click()};
+const applet=new GGBApplet({appName:"classic",scaleContainerClass:"ggb-container",showToolBar:false,showAlgebraInput:false,showMenuBar:false,filename:"Lentille mince convergente.ggb"},true);
+window.addEventListener("load",()=>{
+    applet.inject("ggb-container");
+    document.getElementById("btn-telecharger").onclick=()=>{let a=document.createElement("a");a.href="https://monsieurouiplala.github.io/lentille-mince-convergente/Lentille mince convergente.ggb";a.download="Lentille mince convergente.ggb";a.click()};
+});
 </script>
 </body>
 </html>
